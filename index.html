@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .bmi-area{
+            width: 400px;
+            height: 300px;
+            text-align: center;
+            background-color: tomato;
+            border-radius: 12px;
+        }
+        .bmi-title{
+            padding-top: 20px;
+            font-size: 1.5rem;
+            color: #FFF;
+        }
+        .weight{
+            margin-bottom: 20px;
+        }
+        .height{
+            margin-bottom: 20px;
+        }
+        label{
+            font-size: 0.8rem;
+            color: #fff;
+        }
+        h2{
+            color: #fff;
+            font-size: 1rem;
+            padding-top: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="bmi">
+        <div class="bmi-area">
+            <h1 class="bmi-title">
+                BMI Calculator
+            </h1>
+            <label for="weight">Enter your weight in kg</label><br>
+            <input type="number" name="" id="weight" placeholder="Enter your weight" class="weight"><br>
+            <label for="height">Enter your height in meter</label><br>
+            <input type="number" name="" id="height" placeholder="Enter your height" class="height"><br>
+            <input type="submit" name="" id="" class="submit">
+
+            <h2 class="bmi-text">Your BMI is : <span></span></h2>
+            
+        </div>
+    </div>
+
+    <script>
+        const weight = document.querySelector('.weight');
+        const height = document.querySelector('.height');
+        const result =document.querySelector('span');
+        const submit = document.querySelector('.submit');
+
+        submit.addEventListener('click', ()=>{
+            bmi = Number(weight.value) / (Number(height.value)*2);
+            result.innerHTML = bmi
+            
+        })
+        
+    </script>
+</body>
+</html>
